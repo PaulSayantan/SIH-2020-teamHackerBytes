@@ -63,4 +63,7 @@ def Fetch_phone():
     with open("phone.json","w")as json_file:
         json.dump(res2,json_file)
 
-Fetch_phone()
+def Add_user(f_name,l_name,age,sex,phone,att,carb,pro,vit,fat):
+    data_ext.add_user(data_ext.last_id()[0][0]+1,f_name,l_name,age,sex,phone,att,carb,pro,vit,fat)
+
+    
