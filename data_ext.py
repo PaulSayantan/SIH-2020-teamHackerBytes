@@ -16,10 +16,10 @@ def view():
     conn.close()
     return rows
 
-def mssg(att):
+def mssg():
     conn=sqlite3.connect('database.db')
     cur=conn.cursor()
-    cur.execute("SELECT * FROM dataset WHERE Attendance_Status<=?",(att,))
+    cur.execute("SELECT First_Name,Last_Name,Phone FROM dataset WHERE Attendance_Status=0")
     rows=cur.fetchall()
     conn.close()
     return rows
@@ -27,7 +27,7 @@ def mssg(att):
 def att_update(id):
     conn=sqlite3.connect('database.db')
     cur=conn.cursor()
-    cur.execute("UPDATE dataset SET Attendance_Status=Attendance_Status+1 WHERE UID=?",(id,))
+    cur.execute("UPDATE dataset SET Attendance_Status=1 WHERE UID=?",(id,))
     conn.commit()
     conn.close()
 
