@@ -33,8 +33,14 @@ def get_att():
     with open("att.json","w")as json_file:
         json.dump(res2,json_file)
 
-view_all()
+
 def Att_update():
     data_ext.att_update(100)
-Att_update()    
-view_all()
+
+def get_cal_check():
+    res2=data_ext.carb_check(200)
+    with open("carb.json","w")as json_file:
+        json.dump(res2,json_file)
+
+
+get_cal_check()
