@@ -12,7 +12,7 @@ def sendPostRequest(reqUrl, apiKey, secretKey, useType, person_name,person_age, 
   'secret':'U6OGI5LEL57EYWSZ',
   'usetype':'stage',
   'phone': phoneNo,
-  'message':"{} Age: {}, According to your latest medical report, you are been deprived of carbohydrates in your diet. Please visit your nearest Poshan-Abhiyaan Camp as soon as possible.".format(person_name, person_age),
+  'message':"{} Age: {}, According to your latest medical report, you have been deprived of carbohydrates in your diet. Please visit your nearest Poshan-Abhiyaan Camp as soon as possible.".format(person_name, person_age),
   'senderid': 'SMSIND'
   }
   return requests.post(reqUrl, req_params)
