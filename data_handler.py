@@ -25,13 +25,22 @@ def get_Sex():
     return(res[0][4])
 def get_Phone():
     return(res[0][5])
+def get_attend():
+    return(res[0][6])
 
 def get_att():
     res2=data_ext.mssg(3)
-
-    with open("att.txt","w")as json_file:
+    with open("att.json","w")as json_file:
         json.dump(res2,json_file)
 
 
+def Att_update():
+    data_ext.att_update(100)
 
-get_att()
+def get_cal_check():
+    res2=data_ext.carb_check(200)
+    with open("carb.json","w")as json_file:
+        json.dump(res2,json_file)
+
+
+get_cal_check()
