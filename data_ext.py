@@ -38,3 +38,27 @@ def carb_check(carb):
     rows=cur.fetchall()
     conn.close()
     return rows
+
+def prot_check(prot):
+    conn=sqlite3.connect('database.db')
+    cur=conn.cursor()
+    cur.execute("SELECT * FROM DataSet WHERE protein<?",(carb,))
+    rows=cur.fetchall()
+    conn.close()
+    return rows
+
+def vit_check(vit):
+    conn=sqlite3.connect('database.db')
+    cur=conn.cursor()
+    cur.execute("SELECT * FROM DataSet WHERE vits<?",(vit,))
+    rows=cur.fetchall()
+    conn.close()
+    return rows
+
+def fat_check(carb):
+    conn=sqlite3.connect('database.db')
+    cur=conn.cursor()
+    cur.execute("SELECT * FROM DataSet WHERE fats<?",(fat,))
+    rows=cur.fetchall()
+    conn.close()
+    return rows

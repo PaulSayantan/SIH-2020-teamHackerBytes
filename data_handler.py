@@ -42,5 +42,19 @@ def get_cal_check():
     with open("carb.json","w")as json_file:
         json.dump(res2,json_file)
 
+def get_vit_check():
+    res2=data_ext.carb_check(200)
+    with open("vit.json","w")as json_file:
+        json.dump(res2,json_file)
 
-get_cal_check()
+def get_fat_check():
+    res2=data_ext.carb_check(200)
+    with open("fat.json","w")as json_file:
+        json.dump(res2,json_file)
+
+def get_prot_check():
+    res2=data_ext.carb_check(200)
+    with open("prot.json","w")as json_file:
+        json.dump(res2,json_file)
+
+   
