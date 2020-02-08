@@ -3,16 +3,16 @@ import json
 
 URL = 'https://www.sms4india.com/api/v1/sendCampaign'
 
-with open('carb.json') as json_data:
+with open('fat.json') as json_data:
     data = json.load(json_data)
 
 def sendPostRequest(reqUrl, apiKey, secretKey, useType, person_name,person_age, phoneNo, senderId, textMessage):
   req_params = {
-  'apikey':'GONH3SSENF7LFSKCH2CYO25AHUYGITU5',
-  'secret':'U6OGI5LEL57EYWSZ',
+  'apikey':'MO0BQE8ORQ6MMM703929OCN80FYST0MJ',
+  'secret':'D5OVWMD1ABMIW31W',
   'usetype':'stage',
   'phone': phoneNo,
-  'message':"{} Age: {}, According to your latest medical report, you have been deprived of carbohydrates in your diet. Please visit your nearest Poshan-Abhiyaan Camp as soon as possible.".format(person_name, person_age),
+  'message':"{} Age: {}, According to your latest medical report, you have been deprived of fat in your diet. Please visit your nearest Poshan-Abhiyaan Camp as soon as possible.".format(person_name, person_age),
   'senderid': 'SMSIND'
   }
   return requests.post(reqUrl, req_params)
