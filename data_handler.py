@@ -8,9 +8,9 @@ def view_all():
 def search(key):
     global res
     res=data_ext.search_db(key)
-    print(res)
+    return res
     if not res:
-        return("No Data Found")
+        return None
 
 
 def get_UID():
@@ -57,4 +57,10 @@ def get_prot_check():
     with open("prot.json","w")as json_file:
         json.dump(res2,json_file)
 
-   
+def Fetch_phone():
+    res2=data_ext.fetch_phone()
+    print(res2)
+    with open("phone.json","w")as json_file:
+        json.dump(res2,json_file)
+
+Fetch_phone()
