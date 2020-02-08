@@ -56,3 +56,5 @@ def get_prot_check():
     res2=data_ext.carb_check(200)
     with open("prot.json","w")as json_file:
         json.dump(res2,json_file)
+
+get_att()    
