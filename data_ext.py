@@ -23,3 +23,10 @@ def mssg(att):
     rows=cur.fetchall()
     conn.close()
     return rows
+
+def att_update(id):
+    conn=sqlite3.connect('database.db')
+    cur=conn.cursor()
+    cur.execute("UPDATE DataSet SET Attendance_Status=Attendance_Status+1 WHERE UID=?",(id,))
+    conn.commit()
+    conn.close()
