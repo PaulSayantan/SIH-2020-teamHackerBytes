@@ -1,0 +1,128 @@
+*{
+	scroll-behavior: smooth !important;
+}
+.click{
+	height: 200px;
+	width: 200px;
+	border-radius: 50%;
+}
+.circle{
+	margin-left: 150px;
+}
+#name_nutri{
+	margin-left: 660px;
+	font-size: 40px;
+}
+.listn{
+	margin-bottom: 60px;
+}
+#carbohydrate {
+	margin-left: 5%;
+	padding-top:2px;
+	height:440px;
+	width: 90%;
+	color: #fff; 
+	overflow: scroll;
+	background-color: #1E88E5;
+}
+#carbohydrate h1,p,li{
+	margin-left: 30px;
+}
+#carbohydrate p,li{
+	font-size: 20px;
+}
+#protein {
+	margin-left: 5%;
+	padding-top:2px;
+	margin-top: 10px;
+	width: 90%;
+	height:440px;
+	color: #fff; 
+	overflow: scroll;
+	background-color: #ff9800;
+}
+#protein h1,h2,h3,p,li{
+	margin-left: 30px;
+}
+#protein p,li{
+	font-size: 20px;
+}
+#vitamin{
+	margin-left: 5%;
+	padding-top:2px;
+	margin-top: 10px;
+	width: 90%;
+	height:440px;
+	color: #fff; 
+	overflow: scroll;
+	background-color: #673ab7;
+}
+#vitamin h1,p,li{
+	margin-left: 30px;
+}
+#vitamin p{
+	font-size: 20px;
+}
+#vitamin li{
+	font-size: 25px;
+}
+#h2o {
+	margin-left: 5%;
+	margin-top: 10px;
+	padding-top:50px;
+	width:90%;
+	height:440px;
+	color: #fff; 
+	overflow: scroll;
+	background-color: #808080;
+}
+#h2o h1{
+	margin-left: 30px;
+}
+#h2o p{
+	font-size: 20px;
+}
+#name_exr{
+	margin-left: 660px;
+	font-size: 40px;
+}
+#id_exr{
+	margin-left: 5%;
+	padding-top:2px;
+	margin-top: 10px;
+	width: 90%;
+	height:950px;
+	overflow: scroll;
+	color: #fff; 
+	background-color: #000080;
+}
+#id_exr h1,h2,p{
+	margin-left: 30px;
+}
+#id_exr p{
+	font-size: 20px;
+}
+#name_dodont{
+	margin-left: 660px;
+	font-size: 40px;
+}
+#id_dodont{
+	margin-left: 5%;
+	padding-top:2px;
+	margin-top: 10px;
+	width: 90%;
+	height:560px;
+	color: #fff; 
+	background-color: #58D68D;
+}
+#id_dodont h1,li{
+	margin-left: 30px;
+}
+#id_dodont h1{
+	margin-top: 40px;
+}
+.data{
+	overflow-x:left;
+	width: 400px;
+	height: 500px;
+}
