@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+  background-image: url("F:/flaskapp/static/images/img.png") no-repeat;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Patient ID</h1>
+</div>
+
+<div class="row">
+  <div class="column">
+    <h4 style="font-size: 25px;">Column</h4>
+    <p style="font-size: 20px;">Patient ID: {{ patient_id }}</p>
+  </div>
+  
+  <div class="column">
+    <h4 style="font-size: 25px;">Column</h4>
+    <p style="font-size: 20px;">Patient Name: {{ patient_name }}</p>
+  </div>
+  
+  <div class="column">
+    <h4 style="font-size: 25px;">Column</h4>
+    <p style="font-size: 20px;">Patient Age: {{ patient_age }}</p>
+  </div>
+  <div class="column">
+    <h4 style="font-size: 25px;">Column</h4>
+    <p style="font-size: 20px;">Patient Number: {{ patient_phoneNo }}</p>
+  </div>
+  <div class="column">
+    <h4 style="font-size: 25px;">Column</h4>
+    <p style="font-size: 20px;">Patient Attendence: {{ patient_attendence }}</p>
+  </div>
+</div>
+<div class="create" style="display: relative;">
+	<div class="checkbutton" style="display: absolute;">
+		<form action="#">
+		<p style="font-size: 30px;"><i style="margin-left: 30px;">General Health Measure Data Reauirement: </i></p>
+    	<input type="checkbox" name="health" value="Carbohydrate" width="4px" height="4px;"><i style="font-size: 20px; margin-left: 20px;">Carbohydrate</i><br>
+    	<input type="checkbox" name="health" value="Protein" width="4px" height="4px"><i style="font-size: 20px; margin-left: 20px;">Protein</i><br>
+    	<input type="checkbox" name="health" value="Vitamin" width="4px" height="4px"><i style="font-size: 20px; margin-left: 20px;">Vitamin</i><br>  
+    	<input type="checkbox" name="health" value="Mineral" width="4px" height="4px"><i style="font-size: 20px; margin-left: 20px;">Mineral</i><br>
+	</form>
+	</div>
+	<div class="atten">
+		<form action="#">
+			<p style="font-size: 30px; display: absolute;"><i style="margin-left: 30px;">Attendance</i></p>
+			<input type="checkbox" name="attend" value="Attending" width="4px" height="4px"><i style="font-size: 20px; margin-left: 20px;">Attended</i><br>
+			<input type="checkbox" name="attend" value="Attending" width="4px" height="4px"><i style="font-size: 20px; margin-left: 20px;">Not Attended</i><br>
+		</form>
+	</div>
+</div>
+</body>
+</html>
