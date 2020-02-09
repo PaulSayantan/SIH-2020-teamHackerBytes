@@ -30,12 +30,12 @@ def get_attend():
 
 def get_att():
     res2=data_ext.mssg()
-    with open("att.json","w")as json_file:
+    with open("attendance.json","w")as json_file:
         json.dump(res2,json_file)
 
 
-def Att_update():
-    data_ext.att_update(100)
+def Att_update(id):
+    data_ext.att_update(id)
 
 def get_cal_check():
     res2=data_ext.carb_check(200)
@@ -65,3 +65,8 @@ def Fetch_phone():
 
 def Add_user(f_name,l_name,age,sex,phone,att,carb,pro,vit,fat):
     data_ext.add_user(data_ext.last_id()[0][0]+1,f_name,l_name,age,sex,phone,att,carb,pro,vit,fat)
+
+def Default_att():
+    data_ext.default_att()
+
+   

@@ -85,3 +85,10 @@ def last_id():
     rows=cur.fetchall()
     conn.close()
     return rows
+
+def default_att():
+    conn=sqlite3.connect('database.db')
+    cur=conn.cursor()
+    cur.execute("UPDATE dataset SET Attendance_Status=0")
+    conn.commit()
+    conn.close()
