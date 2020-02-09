@@ -16,10 +16,10 @@ def view():
     conn.close()
     return rows
 
-def mssg(att):
+def mssg():
     conn=sqlite3.connect('database.db')
     cur=conn.cursor()
-    cur.execute("SELECT * FROM dataset WHERE Attendance_Status<=?",(att,))
+    cur.execute("SELECT First_Name,Last_Name,Phone FROM dataset WHERE Attendance_Status=0")
     rows=cur.fetchall()
     conn.close()
     return rows
@@ -27,7 +27,7 @@ def mssg(att):
 def att_update(id):
     conn=sqlite3.connect('database.db')
     cur=conn.cursor()
-    cur.execute("UPDATE dataset SET Attendance_Status=Attendance_Status+1 WHERE UID=?",(id,))
+    cur.execute("UPDATE dataset SET Attendance_Status=1 WHERE UID=?",(id,))
     conn.commit()
     conn.close()
 
@@ -58,7 +58,7 @@ def vit_check(vit):
 def fat_check(carb):
     conn=sqlite3.connect('database.db')
     cur=conn.cursor()
-    cur.execute("SELECT * FROM DataSet WHERE fats<?",(fat,))
+    cur.execute("SELECT * FROM dataset WHERE fats<?",(fat,))
     rows=cur.fetchall()
     conn.close()
     return rows
@@ -70,3 +70,25 @@ def fetch_phone():
         rows=cur.fetchall()
         conn.close()
         return rows
+
+def add_user(id,f_name,l_name,age,sex,phone,att,carb,pro,vit,fat):
+        conn=sqlite3.connect("database.db")
+        cur=conn.cursor()
+        cur.execute("INSERT INTO dataset (uid=?,First_Name=?,Last_Name=?,Age=?,Sex=?,Phone=?,Attendance_Status=?,Carbohydrates=?,Protein=?,vits=?,Fats=?",(id,f_name,l_name,age,sex,phone,att,carb,pro,vit,fat,))
+        conn.commit()
+        conn.close()
+
+def last_id():
+    conn=sqlite3.connect("database.db")
+    cur=conn.cursor()
+    cur.execute("SELECT * FROM dataset WHERE UID=(SELECT max(UID) FROM dataset)")
+    rows=cur.fetchall()
+    conn.close()
+    return rows
+
+def default_att():
+    conn=sqlite3.connect('database.db')
+    cur=conn.cursor()
+    cur.execute("UPDATE dataset SET Attendance_Status=0")
+    conn.commit()
+    conn.close()
