@@ -1,0 +1,55 @@
+#search-bar {
+    margin-top: 19px;
+}
+
+.page-title {
+    padding-right: 50px;
+    margin-top: 17px;
+}
+
+.menu-item {
+    margin-top: 25px;
+}
+
+#test {
+    background-color: #f1f1f1;
+}
+
+.active {
+    margin-top: 25px;
+}
+.row.content {height: 1500px}
+
+.sidenav {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+footer {
+  background-color: #555;
+  color: white;
+  padding: 15px;
+}
+
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {height: auto;} 
+}
+.boxed {
+  border: 1px solid green ;
+}
+
+.navigation{
+	position: relative;
+}
+
+.name{
+	position: absolute;
+	margin-left: 40px;
+}
+
+.search{
+	position: absolute;
+}
